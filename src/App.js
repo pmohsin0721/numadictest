@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './Components/navbar';
 import Home from './Components/home';
 import Interactions from './Components/Interactions'
-import Activities from './Components/Activities'
+import Activities from './Components/Activity'
 import { BrowserRouter as Router, Switch,Route } from 'react-router-dom';
 
 

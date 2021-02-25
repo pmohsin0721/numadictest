@@ -1,11 +1,10 @@
 import React ,{useState} from 'react';
-import "../Styles/Interactions.css";
+import "../Styles/Activity.css";
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'
-import Table from './Table'
 
 
-const Interactions = () => {
+const Activity = () => {
   const [startDate,setstartDate] = useState(null);
   const [endDate, setendDate] = useState(null);
 
@@ -14,27 +13,30 @@ const Interactions = () => {
     return(
         <>
         <div className="container">
-            <h1 className="heading">Place Interactions</h1>
+            <h1 className="heading">Vehicle Activity</h1>
             <div className="date-picker">
-                <label>Start Date:
-            <DatePicker className='date' selected={startDate} 
+               <input type="text" className="input-license" placeholder="License Number" />
+                
+            <DatePicker className='date' placeholderText="Start Date" selected={startDate} 
             onChange={ date1 => setstartDate(date1)}
             dateFormat='yyyy/MM/dd' />
-            </label>
+         
             <br />
-            <label >End Date:
+           
              <DatePicker className='date'
+             placeholderText="End Date"
                selected={endDate} 
             onChange={ date2 => setendDate(date2)}
             dateFormat='yyyy/MM/dd' />
-            </label>
+        
+            <button className="search-button-2">search</button>
             </div>
-            <button className="search-button">search</button>
-            <Table />
+            
+            
         </div>
         
         </>
     );
 }
 
-export default Interactions;
+export default Activity;

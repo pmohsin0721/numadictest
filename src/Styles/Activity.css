@@ -40,7 +40,18 @@ button, input, optgroup, select, textarea {
     font-family: sans-serif;
 }
 
-.search-button {
+.search-button-2 {
+    margin-top: 15.5px;
+   display: inline-flex;
+   height: 40px;
     border-radius: 10px;
     font-family: sans-serif;
+
+}
+
+.input-license {
+    display: inline-flex;
+    border: 3px solid black;
+    height: 40px;
+    margin-top: 17px;
 }

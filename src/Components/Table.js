@@ -6,17 +6,17 @@ class Table extends Component {
       super(props) 
       this.state = { 
          vehicleData: [
-            { LisenceNo : 1, Time : 'Wasif', Coordinates: 'wasif@email.com' },
+            { LicenseNo : 1, Time : '2020/02/25 09:50', Coordinates: 'wasif@email.com' },
             
          ]
       }
    }
    renderTableData() {
     return this.state.vehicleData.map((vehicle, index) => {
-       const { LisenceNo, Time, Coordinates } = vehicle
+       const { LicenseNo, Time, Coordinates } = vehicle
        return (
-          <tr key={LisenceNo}>
-             <td>{LisenceNo}</td>
+          <tr key={LicenseNo}>
+             <td>{LicenseNo}</td>
              <td>{Time}</td>
              <td>{Coordinates}</td>
           </tr>

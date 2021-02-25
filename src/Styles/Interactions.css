@@ -1,0 +1,35 @@
+body{
+    background-color: #EEA47FFF;
+}
+.container{
+    margin-left: 0%;
+    margin-right: 0%;
+    width: 1800px;
+    height: 650px;
+   
+}
+.h1, h1 {
+    font-size: 3.0rem;
+    margin-left: 35px;
+}
+
+button, input, optgroup, select, textarea {
+    display: inline-flex;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.date-picker{
+    display: inline-flex;
+}
+
+.date {
+    align-content: center;
+    width: 200px;
+    border: 3px solid black;
+    margin-top: 15px;
+    height: 40px;
+}

@@ -1,0 +1,23 @@
+.navbar {
+    height: 100px;
+}
+.navbar h1 {
+    display: inline-flex;
+    font-weight: bold;
+    font-size: 70px;
+    font-family:sans-serif;
+  
+}
+.button-home{
+     display: inline-flex;
+    font-size: 25px;
+    font-family: sans-serif;
+    border : 3px solid black;
+    border-radius: 20px;
+    background-color:transparent;
+    height: 57px;
+    width: 100px;
+    margin-left: -130%;
+    align-items: center;
+    padding-left: 15px;
+}

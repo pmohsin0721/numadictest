@@ -1,0 +1,27 @@
+.img-wrapper {
+    position: relative;
+    width: 100%;
+   }
+  
+  .img-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  
+  .btn-success {
+    color: #fff;
+    background-color: indianred;
+    border-color: black;
+    height: 70px;
+    width: 250px;
+    margin-bottom: 25px;
+}
+  .img-overlay:before {
+    content: ' ';
+    display: block;
+    height: 33%;
+  }

@@ -1,5 +1,8 @@
-.table-design {
-  margin-left: 400px;
-  margin-top: 40px;
-  border: 2px solid black;
+#table-design {
+  border: 3px solid black;
+  width: 100%;
+  margin: auto;
+  margin-left: 150px;
+  margin-top: 30px;
+  
 }

@@ -1,4 +1,4 @@
-import React ,{useState} from 'react';
+import React ,{useState,useEffect} from 'react';
 import "../Styles/Interactions.css";
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'
@@ -8,7 +8,20 @@ import Table from './Table'
 const Interactions = () => {
   const [startDate,setstartDate] = useState(null);
   const [endDate, setendDate] = useState(null);
+  const[showTable,setshowTable] = useState(false);
+  const [display,setDisplay]=useState([]);
 
+ useEffect(() => {
+    fetch("http://localhost:8080/vehicledata")
+    .then((res) => res.json())
+    .then((res) => {
+        setDisplay(res);
+    });
+}, []);
+
+const showtable = () => {
+    setshowTable(true);
+}
 
 
     return(
@@ -29,8 +42,9 @@ const Interactions = () => {
             dateFormat='yyyy/MM/dd' />
             </label>
             </div>
-            <button className="search-button">search</button>
-            <Table />
+            <button className="search-button" onClick={showtable}>search</button>
+            { showTable ? ( <Table data={display} />) : null }
+           
         </div>
         
         </>

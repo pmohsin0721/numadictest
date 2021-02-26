@@ -3,6 +3,7 @@ import "../Styles/Interactions.css";
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'
 import Table from './Table'
+import Pagination from '@material-ui/lab/Pagination';
 
 
 const Interactions = () => {
@@ -43,8 +44,8 @@ const showtable = () => {
             </label>
             </div>
             <button className="search-button" onClick={showtable}>search</button>
-            { showTable ? ( <Table data={display} />) : null }
-           
+            { showTable ? ( <> <Table data={display} /> <Pagination count={10} /> </>) : null }
+            
         </div>
         
         </>

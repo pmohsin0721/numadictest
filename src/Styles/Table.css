@@ -1,34 +1,5 @@
-#title {
-    text-align: center;
-    font-family: arial, sans-serif;
-  }
-  
-  #vehicleData {
-    text-align: center;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    border: 3px solid #ddd;
-    width: 100%;
-  }
-  
-  #vehicleData td, #vehicleData th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
-  #vehicleData tr:nth-child(even){background-color: #f2f2f2;}
-  
-  #vehicleData tr:hover {background-color: #ddd;}
-  
-  #vehicleData th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: center;
-    background-color: #4CAF50;
-    color: white;
-  }
-
-  .display-table{
-      margin-top: 40px;
-      margin-left: 100px;
-  }
+.table-design {
+  margin-left: 400px;
+  margin-top: 40px;
+  border: 2px solid black;
+}

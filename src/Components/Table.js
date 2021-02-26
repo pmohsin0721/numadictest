@@ -1,46 +1,27 @@
-import React, { Component } from 'react'
+import * as React from "react";
 import '../Styles/Table.css'
+import { DataGrid } from "@material-ui/data-grid";
 
-class Table extends Component {
-   constructor(props) {
-      super(props) 
-      this.state = { 
-         vehicleData: [
-            { LicenseNo : 1, Time : '2020/02/25 09:50', Coordinates: 'wasif@email.com' },
-            
-         ]
-      }
-   }
-   renderTableData() {
-    return this.state.vehicleData.map((vehicle, index) => {
-       const { LicenseNo, Time, Coordinates } = vehicle
-       return (
-          <tr key={LicenseNo}>
-             <td>{LicenseNo}</td>
-             <td>{Time}</td>
-             <td>{Coordinates}</td>
-          </tr>
-       )
-    })
- }
- renderTableHeader() {
-    let header = Object.keys(this.state.vehicleData[0])
-    return header.map((key, index) => {
-       return <th key={index}>{key.toUpperCase()}</th>
-    })
- }
- render() {
-    return (
-       <div className="display-table">
-          <table id='vehicleData'>
-             <tbody>
-                <tr>{this.renderTableHeader()}</tr>
-                {this.renderTableData()}
-             </tbody>
-          </table>
-       </div>
-    )
- }
+const columns = [
+  { field: "id", headerName: "ID", width: 70 },
+  { field: "LicenseNumber", headerName: "License Number", width: 200 },
+  { field: "Time", headerName: "Time", width: 200 },
+  { field: "Coordinates", headerName: "Coordinates",width: 250}
+];
+
+const rows = [
+  { id: 1, LicenseNumber: "Snow", Time: "Jon", Coordinates: 35 },
+  { id: 2, LicenseNumber: "Lannister", Time: "Cersei", Coordinates: 42 },
+  { id: 3, LicenseNumber: "Lannister", Time: "Jaime", Coordinates: 45 },
+  { id: 4, LicenseNumber: "Stark", Time: "Arya", Coordinates: 16 },
+  { id: 5, LicenseNumber: "Targaryen", Time: "Daenerys", Coordinates: null },
+
+];
+
+export default function Table() {
+  return (
+    <div className="table-design" style={{ height: 400, width: "65.5%" }}>
+      <DataGrid rows={rows} columns={columns} pageSize={7} />
+    </div>
+  );
 }
-
-export default Table;
